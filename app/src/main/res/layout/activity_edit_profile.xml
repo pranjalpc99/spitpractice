@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".EditProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/profedittoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite">
+
+        <FrameLayout
+            android:layout_weight="0"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/profeditback"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                android:onClick="profeditback"
+                android:padding="15dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/round_arrow_back_ios_black_24" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_weight="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/profedittype"
+                android:text="Edit Profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_gravity="center|center_vertical"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_weight="0"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:text="Save"
+                android:id="@+id/profeditsave"
+                android:textColor="@color/blue500"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:textAlignment="center"
+
+                android:onClick="profeditsave"/>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@id/profedittoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/profeditImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"/>
+
+            <LinearLayout
+                android:id="@+id/txteditprofname"
+                android:layout_below="@id/profeditImage"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@color/blue700"/>
+
+                <EditText
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/txteditprofilename"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editgender"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_below="@id/txteditprofname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editradioGroup"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Gender"
+                        android:textColor="@color/blue700"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:buttonTint="@color/black"
+                        android:id="@+id/editmale_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male "
+                        android:padding="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:onClick="editselectGender"/>
+
+                    <RadioButton
+                        android:buttonTint="@color/black"
+                        android:id="@+id/editfemale_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Female "
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:onClick="editselectGender"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/txteditprofUID"
+                android:layout_below="@id/editgender"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="UID"
+                    android:textColor="@color/blue700"/>
+
+                <EditText
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/txteditprofileUID"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/edityear"
+                android:layout_below="@id/txteditprofUID"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Year"
+                    android:textColor="@color/blue700"
+                    android:textSize="20sp"/>
+
+                <Spinner
+                    android:backgroundTint="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/editidClass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@id/edityear"
+                android:id="@+id/editbranch"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Branch"
+                    android:textSize="20sp"
+                    android:textColor="@color/blue700"/>
+
+                <Spinner
+                    android:backgroundTint="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/editidBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/txteditprofcollege"
+                android:layout_below="@id/editbranch"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="College Email ID"
+                    android:textColor="@color/blue700"/>
+
+                <EditText
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/txteditprofilecollege"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

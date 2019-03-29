@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="7dp"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/webNotificationCard"
+        card_view:cardElevation="5dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardBackgroundColor="@color/colorWhite"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:padding="5dp"
+                android:textSize="10sp"
+                android:layout_margin="10dp"
+                android:id="@+id/textClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/rounded_blue_btn"/>
+
+            <TextView
+                android:padding="5dp"
+                android:textSize="10sp"
+                android:id="@+id/textType"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/textClass"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/rounded_blue_btn"/>
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/textno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/textType"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textCard"
+                android:textColor="@color/black"
+                android:textSize="22sp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+
